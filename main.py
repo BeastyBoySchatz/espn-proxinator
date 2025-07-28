@@ -28,4 +28,12 @@ def get_my_team():
         return jsonify({"error": str(e)}), 400
 
 app.run(host='0.0.0.0', port=8080)
+from flask import Flask
+
+app = Flask(__name__)
+# … your existing endpoints …
+
+@app.route("/")
+def index():
+    return "🎉 ESPN proxy is running!", 200
 
